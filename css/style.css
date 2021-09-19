@@ -1,0 +1,148 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--pale-blue);
+  padding: 3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: #fff;
+  overflow: hidden;
+  gap: 2rem;
+}
+
+.container--image {
+  width: 100%;
+  height: 100%;
+}
+
+.container--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 5rem;
+  gap: 1rem;
+}
+
+.text__header {
+  text-transform: capitalize;
+  color: var(--dark-blue);
+}
+
+.text__paragraph {
+  color: var(--desaturated-blue);
+}
+
+/* Annual Payment Part */
+.annual {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: var(--very-pale-blue);
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 80%;
+}
+
+.annual__heading {
+  font-size: 1.5rem;
+}
+
+.annual__heading span {
+  display: block;
+  color: var(--desaturated-blue);
+}
+
+.annual__link:link,
+.annual__link:visited {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  color: var(--bright-blue);
+}
+
+.annual__link:hover,
+.annual__link:active {
+  color: #766cf1;
+  text-decoration: none;
+}
+
+.buttons {
+  width: 80%;
+  padding: 2rem 0;
+}
+
+.btn {
+  width: 100%;
+  outline: 0;
+  border: 0;
+  padding: 1.5rem 5rem;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn--primary {
+  color: #fff;
+  background-color: var(--bright-blue);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn--primary:hover {
+  background: #766cf1;
+}
+
+.btn--secondary {
+  color: var(--desaturated-blue);
+  background: none;
+}
+
+.btn--secondary:hover {
+  color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .container {
+    width: 30%;
+    height: 100%;
+    gap: 1rem;
+  }
+}
